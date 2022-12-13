@@ -25,9 +25,9 @@ public class CCuenta {
    /**
     * 
     * @param nom Nombre del titular de la cuenta
-    * @param cue
-    * @param sal
-    * @param tipo 
+    * @param cue La cuenta en si
+    * @param sal El saldo total de la cuenta
+    * @param tipo Tipo de interés que tiene la cuenta
     */
     public CCuenta (String nom, String cue, double sal, double tipo)
     {
@@ -38,7 +38,7 @@ public class CCuenta {
     }
   /**
    * 
-   * @param nom 
+   * @param nom Almacena el nombre de la cuenta
    */
     public void asignarNombre(String nom)
     {
@@ -55,7 +55,11 @@ public class CCuenta {
     {
         return saldo;
     }
-
+/**
+ * 
+ * @param cantidad Cantidad de dinero que se va a ingresar o retirar en la cuenta
+ * @throws Exception 
+ */
     
     public void ingresar(double cantidad) throws Exception
     {
@@ -79,7 +83,7 @@ public class CCuenta {
         return cuenta;
     }
 
-  
+    
   public void setCuenta(String cuenta) {
     this.cuenta = cuenta;
   }
