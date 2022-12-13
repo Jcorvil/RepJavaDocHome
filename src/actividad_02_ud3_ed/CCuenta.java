@@ -7,18 +7,22 @@ package actividad_02_ud3_ed;
 
 /**
  * 
- * @author Ana
+ * @author Jorge
  */
 public class CCuenta {
 
-
+/**
+ * @hidden nombre "nombre" establece el nombre de la cuenta
+ */
      
   protected String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
 
-  
+    /**
+     *Constructor por defecto
+     */
     public CCuenta ()
     {
     }
@@ -44,13 +48,19 @@ public class CCuenta {
     {
         nombre=nom;
     }
-   
+   /**
+    * 
+    * @return Devuelve el nombre almacenado
+    */
     public String obtenerNombre()
     {
         return nombre;
     }
 
-    
+    /**
+     * 
+     * @return Devuelve el saldo de la cuenta
+     */
      public double estado ()
     {
         return saldo;
@@ -58,7 +68,7 @@ public class CCuenta {
 /**
  * 
  * @param cantidad Cantidad de dinero que se va a ingresar o retirar en la cuenta
- * @throws Exception 
+ * @throws Exception
  */
     
     public void ingresar(double cantidad) throws Exception
@@ -68,7 +78,11 @@ public class CCuenta {
         setSaldo(saldo + cantidad);
     }
 
-   
+    /**
+     *
+     * @param cantidad El saldo disponible en la cuenta
+     * @throws Exception Mensajes que muestra si la cantidad de la cuenta no es suficiente
+     */
     public void retirar (double cantidad) throws Exception
     {
         if (cantidad < 0){
@@ -78,28 +92,44 @@ public class CCuenta {
         setSaldo(saldo - cantidad);
     }
     
+    /**
+     *
+     * @return Devuelve la cuenta sobre la que se va a trabajar
+     */
     public String obtenerCuenta ()
     {
         return cuenta;
     }
 
-    
+    /**
+     * 
+     * @param cuenta Otorga un nombre a la cuenta
+     */
   public void setCuenta(String cuenta) {
     this.cuenta = cuenta;
   }
 
-  
-  public void setSaldo(double saldo) {
+    /**
+     *
+     * @param saldo Establece un saldo a la cuenta
+     */
+    public void setSaldo(double saldo) {
     this.saldo = saldo;
   }
 
- 
+ /**
+  * 
+  * @return Devuelve el tipo de interés de la cuenta
+  */
   public double getTipoInterés() {
     return tipoInterés;
   }
 
-  
-  public void setTipoInterés(double tipoInterés) {
+    /**
+     *
+     * @param tipoInterés Establece el tipo de interés de la cuenta
+     */
+    public void setTipoInterés(double tipoInterés) {
     this.tipoInterés = tipoInterés;
   }
 }
